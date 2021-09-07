@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>建党100周年</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  <script src="jquery/jquery-3.2.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.js"></script>
+  <style>
+ #dert 	{
+	text-align: center;
+  	background-color: #BC0000;
+  	width: 100%;
+  	height:300px;	
+  	 font-size: 75px;
+  	 margin-top: 50px;
+  	 padding-top: 80px;
+  	 animation: mymove1 2s infinite ;
+    animation-iteration-count:1;
+  }
+  @keyframes mymove1 {
+    0% {font-size:75px;}
+   100%{font-size: 85px;}
+  }
+          *{margin: 0;padding: 0;list-style: none;}
+          .slider{
+              width: 1200px;
+              height: 373px;
+              overflow: hidden;
+              position: relative;
+          }    
+          .slider .slides{
+              height: 373px;
+              width: 2500px;
+          }
+          .slider .slide{
+              float: left;
+              width: 312.5px;
+              height: 373px;
+          }
+          .slider .slide img{
+              width: 250px;
+              height: 373px;
+          }
+      </style>
+ <script type="text/javascript">
+        $(document).ready(function(){
+            //1.var动态属性
+            var width=321.5;//每次移动多少像素
+            var speed=2000;
+            var pause=1000; //多少时间换一次图
+            var interval;
+            //获取对应元素
+            var $slider=$(".slider");
+            var $slideContainer=$slider.find(".slides");//同=$(".slides") 用find()表现更清楚而已
+            var $slide=$slideContainer.find(".slide");
+            var $navDiv=$("#navDiv a");
+            var index=0;
+            var a=0;
+            //2.setInterval 设置定时器
+            function start(){ 
+                interval=setInterval(function(){
+                    //2.1对.slides动画效果 左移
+                    $slideContainer.animate({"margin-left":"-="+width},speed,function(){
+                        //判断图片到最后一张了
+                        index++;
+                        if(index==$slide.length-4){
+                            index=0;
+                            $slideContainer.css("margin-left",0);
+                        }
+                    });
+                },pause);
+            }
+			
+            start();
+            //3.设置鼠标移入停止，移出又动起来
+            $slider.on({          //on()写多个函数，同bind()
+                mouseenter:function(){
+                    clearInterval(interval);
+                    interval=null;
+                },
+                mouseleave:function(){
+                    start();
+                }
+            });
+        })
+    </script>
+  </head>
+	<body>
+		<nav class="navbar navbar-expand-sm   fixed-top "  style="background-color:#ffffff;padding: 0px;" >
+		  <a class="navbar-brand" href="index.html"  style="color: #FFFF00;font-size: 30px;"><img src="./img/党旗1.png"/></a>
+		  <!-- 窗口小于576px显示按钮导航链接隐藏 -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+		      <li class="nav-item" >
+		        <a class="nav-link" href="dangshi.html"style="color: #b60000;font-size: 30px;">党史</a>
+		      </li>
+		      <li class="nav-item" style="background-color:  #ff0000;">
+		        <a class="nav-link" href="dangchengyuan.html"style="color: #b60000;font-size: 30px;">党成员</a>
+		      </li>
+		      <li class="nav-item" >
+		        <a class="nav-link" href="dangneijianshe.html"style="color: #b60000;font-size: 30px;">党内建设</a>
+		      </li>    
+			  <li class="nav-item">
+			    <a class="nav-link" href="zhanwangweilai.html"style="color: #b60000;font-size: 30px;">展望未来</a>
+			  </li>   
+		    </ul>
+		
+			
+		  </div>  
+		</nav>
+			<hr style="height:3px;border:none;border-top:3px double red;margin:0px 0px 0px 0px;" />
+			<div  id="dert"  >
+			   <p style="color: #ffff00;">学习党的重要成员，了解党的重要纲领</p>		
+			</div>
+			<div class="container">
+				
+			<div class="header">
+			                <h1 class="text-muted" style="color: #BC0000;">
+			               先烈们
+			                </h1>
+			            </div>
+			            
+			            <div class="slider col-lg-12 col-xs-6  col-md-3 ">
+			                <ul class="slides">
+			                    <li  class="slide"><img src="img/character/pass/1.jpg"/></li>
+			                    <li  class="slide"><img src="img/character/pass/2.jpg"/></li>
+			                    <li  class="slide"><img src="img/character/pass/3.jpg"/></li>
+			                    <li  class="slide"><img src="img/character/pass/4.jpg"/></li>
+			                    <li  class="slide"><img src="img/character/pass/5.jpg"/></li>
+								<li  class="slide"><img src="img/character/pass/6.jpg"/></li>
+								<li  class="slide"><img src="img/character/pass/1.jpg"/></li>
+								<li  class="slide"><img src="img/character/pass/3.jpg"/></li>
+			                </ul>
+			            </div>   
+						<!-- 轮播图结束 -->
+						 <!-- 图片简介 -->
+						   <div id="accordion">
+						     <div class="card">
+						       <div class="card-header">
+						         <a class="card-link" data-toggle="collapse" href="#collapseOne">
+						      人大常委
+						         </a>
+						       </div>
+						       <div id="collapseOne" class="collapse show" data-parent="#accordion">
+						         <div class="card-body collapse show" >
+						           <div class="row" >
+						           						   <div class="col-xs-3 col-md-6 col-lg-3" ><img  class="img-fluid" style="width: 100%;"src="img/character/now/1.jpg" />
+						           						   <div class="der2">  习近平</div>
+						           						 </div>
+						           						  <div class="col-xs-3  col-md-6 col-lg-3"><img class="img-fluid" style="width: 100%;"src="img/character/now/2.jpg" /> 
+						           						  <div class="der2"> 韩正</div>
+						           						  </div>
+						           						   <div class="col-xs-3 col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/3.jpg" />
+						           						   <div class="der2">李克强 </div>
+						           						   		  </div>
+						           						
+						           						   <div class="col-xs-3 col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/4.jpg" />
+						           						   <div class="der2"> 栗战书</div>   </div>	
+						           						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/5.jpg" />
+						           						   <div class="der2">
+						           						   		汪洋
+						           						   </div></div>	
+						           						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"style="text-align: center;" src="img/character/now/6.jpg" />
+						           						   <div class="der2">
+						           						   	王沪宁
+						           						   </div></div>	
+						           						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/7.jpg" />
+						           						   <div class="der2">赵乐际</div>			   		
+						           						   </div>	
+						           							</div>
+						         </div>
+						       </div>
+						     </div>
+						     <div class="card">
+						       <div class="card-header">
+						         <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+						      自治区领导
+						       </a>
+						       </div>
+						       <div id="collapseTwo" class="collapse" data-parent="#accordion">
+						         <div class="card-body">
+						        <div class="row" >
+						        						   <div class="col-xs-3 col-md-6 col-lg-3" ><img  class="img-fluid" style="width: 100%;"src="img/character/now/1.jpg" />
+						        						   <div class="der2">  习近平</div>
+						        						 </div>
+						        						  <div class="col-xs-3  col-md-6 col-lg-3"><img class="img-fluid" style="width: 100%;"src="img/character/now/2.jpg" /> 
+						        						  <div class="der2"> 韩正</div>
+						        						  </div>
+						        						   <div class="col-xs-3 col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/3.jpg" />
+						        						   <div class="der2">李克强 </div>
+						        						   		  </div>
+						        						
+						        						   <div class="col-xs-3 col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/4.jpg" />
+						        						   <div class="der2"> 栗战书</div>   </div>	
+						        						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/5.jpg" />
+						        						   <div class="der2">
+						        						   		汪洋
+						        						   </div></div>	
+						        						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"style="text-align: center;" src="img/character/now/6.jpg" />
+						        						   <div class="der2">
+						        						   	王沪宁
+						        						   </div></div>	
+						        						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/7.jpg" />
+						        						   <div class="der2">赵乐际</div>			   		
+						        						   </div>	
+						        							</div>
+						         </div>
+						       </div>
+						     </div>
+						     <div class="card">
+						       <div class="card-header">
+						         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+						          省级领导
+						         </a>
+						       </div>
+						       <div id="collapseThree" class="collapse" data-parent="#accordion">
+						         <div class="card-body">
+						         <div class="row" >
+						         						   <div class="col-xs-3 col-md-6 col-lg-3" ><img  class="img-fluid" style="width: 100%;"src="img/character/now/1.jpg" />
+						         						   <div class="der2">  习近平</div>
+						         						 </div>
+						         						  <div class="col-xs-3  col-md-6 col-lg-3"><img class="img-fluid" style="width: 100%;"src="img/character/now/2.jpg" /> 
+						         						  <div class="der2"> 韩正</div>
+						         						  </div>
+						         						   <div class="col-xs-3 col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/3.jpg" />
+						         						   <div class="der2">李克强 </div>
+						         						   		  </div>
+						         						
+						         						   <div class="col-xs-3 col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/4.jpg" />
+						         						   <div class="der2"> 栗战书</div>   </div>	
+						         						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/5.jpg" />
+						         						   <div class="der2">
+						         						   		汪洋
+						         						   </div></div>	
+						         						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"style="text-align: center;" src="img/character/now/6.jpg" />
+						         						   <div class="der2">
+						         						   	王沪宁
+						         						   </div></div>	
+						         						   <div class="col-xs-3  col-md-6 col-lg-3"> <img class="img-fluid" style="width: 100%;"src="img/character/now/7.jpg" />
+						         						   <div class="der2">赵乐际</div>			   		
+						         						   </div>	
+						         							</div>
+						         </div>
+						       </div>
+						     </div>
+						   </div>
+					  
+				 
+			        </div>
+
+   <!-- 这里container截至 -->	 
+
+
+
+
+
+  <div class="jumbotron text-center" style="margin-bottom:0;
+  background-color: #BC0000;
+  background-image: url(img/党旗.png);
+  background-repeat: no-repeat;">
+   <h1 style="color: #FFFF00;padding-top: 30px;font-size: 65px;">热烈祝贺中国共产党成立100周年</h1>
+    <h3 style="color: #FFFF00;">见证100年来党的光荣历史</h3> 
+</div>
+
+
+	</body>
+	
+</html>

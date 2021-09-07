@@ -1,0 +1,127 @@
+body{
+	/* 全局红色 */
+	background-image: url(../img/bg.jpg);
+}
+.nav-item:hover {
+  background-color: #ff0000;
+}
+h1,h2,h5,p,h3{
+	color: black;
+}
+.jumbotron {
+height: 300px;
+}
+a{
+	color: #DE0A0A;
+}	
+.navbar-toggler{
+	background-color: #ff0000;
+}
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  .navbar-brand {
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+.der{
+	
+	text-align: center;
+	padding-top:5px;
+	font-size:25px;
+}
+/* 动态文字 */	
+
+.der2{
+	text-align: center;
+	padding-top:5px;
+	font-size:15px;
+}
+.fl{
+	width:1000px;
+}
+.fl li{
+	width: 1000px;
+	height: auto;
+	background-color: #ffffff;
+}
+.fl li:hover{
+	
+	background-color: #ff0000;
+}
+.page{
+	
+	padding-top: 20px;
+	height: 64px;
+}
+.page a{
+	
+	width: 20px;
+	height: 1.25rem;
+}
+.fl a{
+	color: #000000;
+	text-align: left;
+}
+.fl.ul i{
+	font-size: 19px;
+}
+
+.red{
+	color: #BC0000;
+}
+.page-link{
+	
+	color: #000000;
+	background-color: #f7f6f3;
+	
+}
+.page-link:hover{
+	
+	background-color: #ff0000;
+}
+
+
+
+/* 时间轴 */
+ .time{
+        width: 740px;
+      }
+      .time ul{
+        list-style-type: none;
+        background-image: url();
+        background-repeat: repeat-x;
+        height: 10px;
+        position:relative;
+          top: 10px;
+      }
+      .timeline li{
+      float: left;
+      width: 110px;
+      background-image: url();
+      background-repeat: no-repeat;
+	  background-color: #000000;
+      position:relative;
+        top:-4px;
+        left: 30px; 
+      }
+      li .pront-text{
+      position:relative;
+        top:-20px;
+        left: -25px;
+      font-size: 16px;
+      font-family: arial, Arial, Tahoma;
+      }
+      .timeline li:hover{
+      background-image: url();
+	  background-color: #000000;
+      background-repeat: no-repeat;
+      color: #d3181c;
+      font-weight: bold;
+      }
